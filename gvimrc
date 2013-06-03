@@ -1,14 +1,11 @@
-" An example for a gvimrc file.
+
 " The commands in this are executed when the GUI is started.
-"
-" Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last change:	2001 Sep 02
-"
-" To use it, copy it to
-"     for Unix and OS/2:  ~/.gvimrc
-"	      for Amiga:  s:.gvimrc
-"  for MS-DOS and Win32:  $VIM\_gvimrc
-"	    for OpenVMS:  sys$login:.gvimrc
+
+"Pathogen
+filetype off  "redundant ?
+call pathogen#incubate()
+call pathogen#helptags()
+filetype plugin indent on
 
 set nocompatible               " be iMproved
 
@@ -64,5 +61,11 @@ endif
   set guifont=Courier_New:h11:cANSI
   
 colorscheme zenburn
+map <F2> :NERDTreeToggle<CR>  
+
+"Show line numbers
+set number
+
+let mapleader=","
   
-  
+map <leader>nt :NERDTreeToggle<CR>

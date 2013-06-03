@@ -1,3 +1,10 @@
+call pathogen#infect()
+call pathogen#helptags()
+
+filetype off
+syntax on
+filetype plugin indent on
+
 set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
